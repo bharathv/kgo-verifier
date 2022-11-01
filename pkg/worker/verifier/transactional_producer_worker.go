@@ -253,7 +253,7 @@ func (pw *TransactionalProducerWorker) produceInner(n int64) (int64, []BadOffset
 					// So just account for the control record left by BeginTransaction
 					// TODO: this behavior has changed on the tip of dev and aborts
 					// now leave a control record
-					currentOffsets[i] += 1
+					currentOffsets[i] += 2
 				}
 			}
 
